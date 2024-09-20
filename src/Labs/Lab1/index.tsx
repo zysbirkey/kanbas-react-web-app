@@ -64,13 +64,12 @@ export default function Lab1() {
 
         My favorite recipe:
         <ol id="wd-your-favorite-recipe">
-          <li>Prepare the ingredients.</li>
-          <li>Season and cook the beef patty on a grill or pan.</li>
-          <li>Place a slice of cheese on the patty and let it melt.</li>
+          <li>Cook the beef patty.</li>
+          <li>Melt cheese on the patty.</li>
           <li>Toast the buns.</li>
-          <li>Assemble the burger with the patty, toppings, and condiments.</li>
-          <li>Serve and enjoy!</li>
-          </ol>
+          <li>Assemble the burger.</li>
+          <li>Enjoy!</li>
+        </ol>
       </div>
 
         <h5>Unordered List Tag</h5>
