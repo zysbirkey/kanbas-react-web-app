@@ -40,19 +40,6 @@ export default function Assignments() {
             <span><b>Due</b> May 27 at 11:59pm | 100 pts </span>   
           </li>
         </ul>
-
-        <h3 id="wd-assignments-title">
-          QUIZZES 10% of Total <button>+</button>
-        </h3>
-
-        <h3 id="wd-assignments-title">
-          EXAMS 20% of Total <button>+</button>
-        </h3>
-        
-        <h3 id="wd-assignments-title">
-          PROJECT 30% of Total <button>+</button>
-        </h3>
-
       </div>
   );}
   
