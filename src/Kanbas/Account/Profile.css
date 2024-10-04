@@ -1,0 +1,13 @@
+.profile-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .form-control, .btn {
+    letter-spacing: 1px;
+  }
+
+  #wd-profile-screen {
+    margin-left: 50px;
+  }
+  
