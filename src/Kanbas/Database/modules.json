@@ -1,0 +1,440 @@
+[
+    {
+      "_id": "M101",
+      "name": "Introduction to Rocket Propulsion",
+      "description": "Basic principles of rocket propulsion and rocket engines.",
+      "course": "RS101",
+      "lessons": [
+        {
+          "_id": "L101",
+          "name": "History of Rocketry",
+          "description": "A brief history of rocketry and space exploration.",
+          "module": "M101"
+        },
+        {
+          "_id": "L102",
+          "name": "Rocket Propulsion Fundamentals",
+          "description": "Basic principles of rocket propulsion.",
+          "module": "M101"
+        },
+        {
+          "_id": "L103",
+          "name": "Rocket Engine Types",
+          "description": "Overview of different types of rocket engines.",
+          "module": "M101"
+        }
+      ]
+    },
+    {
+      "_id": "M102",
+      "name": "Fuel and Combustion",
+      "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+      "course": "RS101",
+      "lessons": [
+        {
+          "_id": "L201",
+          "name": "Rocket Fuel",
+          "description": "Overview of different types of rocket fuels.",
+          "module": "M102"
+        },
+        {
+          "_id": "L202",
+          "name": "Combustion Processes",
+          "description": "Understanding combustion processes and efficiency.",
+          "module": "M102"
+        },
+        {
+          "_id": "L203",
+          "name": "Combustion Instability",
+          "description": "Understanding combustion instability and mitigation.",
+          "module": "M102"
+        }
+      ]
+    },
+    {
+      "_id": "M103",
+      "name": "Nozzle Design",
+      "description": "Principles of rocket nozzle design and performance optimization.",
+      "course": "RS101",
+      "lessons": [
+        {
+          "_id": "L301",
+          "name": "Nozzle Design",
+          "description": "Overview of different types of rocket nozzles.",
+          "module": "M103"
+        },
+        {
+          "_id": "L302",
+          "name": "Nozzle Performance",
+          "description": "Understanding nozzle performance and efficiency.",
+          "module": "M103"
+        },
+        {
+          "_id": "L303",
+          "name": "Nozzle Optimization",
+          "description": "Optimizing nozzle design for specific applications.",
+          "module": "M103"
+        }
+      ]
+    },
+    {
+      "_id": "M201",
+      "name": "Fundamentals of Aerodynamics",
+      "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+      "course": "RS102"
+    },
+    {
+      "_id": "M202",
+      "name": "Subsonic and Supersonic Flow",
+      "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+      "course": "RS102"
+    },
+    {
+      "_id": "M203",
+      "name": "Aerodynamic Heating",
+      "description": "Study of aerodynamic heating and thermal protection systems.",
+      "course": "RS102"
+    },
+    {
+      "_id": "M301",
+      "name": "Spacecraft Structural Design",
+      "description": "Fundamentals of designing spacecraft structures and materials selection.",
+      "course": "RS103"
+    },
+    {
+      "_id": "M302",
+      "name": "Orbital Mechanics",
+      "description": "Understanding orbital dynamics and mission planning.",
+      "course": "RS103"
+    },
+    {
+      "_id": "M303",
+      "name": "Spacecraft Systems Engineering",
+      "description": "Overview of spacecraft systems and subsystems engineering.",
+      "course": "RS103"
+    },
+    {
+        "_id": "M401",
+        "name": "Organic Chemistry Basics",
+        "description": "Introduction to organic compounds and reactions.",
+        "course": "RS104"
+      },
+      {
+        "_id": "M402",
+        "name": "Functional Groups and Reactions",
+        "description": "Study of functional groups and organic reactions.",
+        "course": "RS104"
+      },
+      {
+        "_id": "M403",
+        "name": "Stereochemistry and Organic Synthesis",
+        "description": "Concepts of stereochemistry and synthesis techniques.",
+        "course": "RS104"
+    },
+      {
+        "_id": "M501",
+        "name": "Inorganic Compounds and Bonding",
+        "description": "Properties and bonding theories of inorganic compounds.",
+        "course": "RS105"
+      },
+      {
+        "_id": "M502",
+        "name": "Coordination Chemistry",
+        "description": "Study of metal complexes and coordination bonds.",
+        "course": "RS105"
+      },
+      {
+        "_id": "M503",
+        "name": "Applications of Inorganic Chemistry",
+        "description": "Catalysis and industrial applications of inorganic chemistry.",
+        "course": "RS105"
+    },
+      {
+        "_id": "M601",
+        "name": "Thermodynamics in Chemistry",
+        "description": "Study of energy changes and chemical thermodynamics.",
+        "course": "RS106"
+      },
+      {
+        "_id": "M602",
+        "name": "Quantum Mechanics for Chemistry",
+        "description": "Introduction to quantum mechanics in chemistry.",
+        "course": "RS106"
+      },
+      {
+        "_id": "M603",
+        "name": "Kinetics and Reaction Dynamics",
+        "description": "Study of reaction rates and chemical dynamics.",
+        "course": "RS106"
+    },
+      {
+        "_id": "M701",
+        "name": "Introduction to Elvish Languages",
+        "description": "Study of the Elvish languages and their grammar.",
+        "course": "RS107"
+      },
+      {
+        "_id": "M702",
+        "name": "Dwarvish and the Black Speech",
+        "description": "Overview of Khuzdul and the Black Speech of Mordor.",
+        "course": "RS107"
+      },
+      {
+        "_id": "M703",
+        "name": "Philology of Middle-earth",
+        "description": "Study of the philological structure of Middle-earth languages.",
+        "course": "RS107"
+      },
+      {
+        "_id": "M801",
+        "name": "Diplomacy in Middle-earth",
+        "description": "Study of inter-species diplomacy in Middle-earth.",
+        "course": "RS108"
+      },
+      {
+        "_id": "M802",
+        "name": "Conflict Resolution in Middle-earth",
+        "description": "Analyzing conflicts and resolutions in Middle-earth.",
+        "course": "RS108"
+      },
+      {
+        "_id": "M803",
+        "name": "Leadership Lessons from the Council of Elrond",
+        "description": "Leadership principles learned from Middle-earth.",
+        "course": "RS108"
+      },
+      {
+        "_id": "M901",
+        "name": "Magic and Philosophy in Middle-earth",
+        "description": "Exploring the philosophy behind magic in Middle-earth.",
+        "course": "RS109"
+      },
+      {
+        "_id": "M902",
+        "name": "Artifacts of Power",
+        "description": "Study of powerful magical artifacts in Middle-earth.",
+        "course": "RS109"
+      },
+      {
+        "_id": "M903",
+        "name": "Wizards and Their Influence",
+        "description": "Understanding the role and influence of wizards.",
+        "course": "RS109"
+      },
+      {
+        "_id": "M1001",
+        "name": "Foundations of Democratic Education",
+        "description": "Principles of education in a democratic society.",
+        "course": "RS110"
+      },
+      {
+        "_id": "M1002",
+        "name": "Participatory Learning Methods",
+        "description": "Study of participatory learning approaches.",
+        "course": "RS110"
+      },
+      {
+        "_id": "M1003",
+        "name": "Challenges in Modern Education",
+        "description": "Exploring challenges in implementing democratic education.",
+        "course": "RS110"
+      },
+      {
+        "_id": "M1101",
+        "name": "Latin American Independence Movements",
+        "description": "Study of major independence movements in Latin America.",
+        "course": "RS111"
+      },
+      {
+        "_id": "M1102",
+        "name": "Enlightenment and Independence",
+        "description": "Role of Enlightenment ideas in independence movements.",
+        "course": "RS111"
+      },
+      {
+        "_id": "M1103",
+        "name": "Simón Bolívar's Legacy",
+        "description": "Impact of Simón Bolívar on Latin American independence.",
+        "course": "RS111"
+      },
+      {
+        "_id": "M1201",
+        "name": "Educational Reforms of the 19th Century",
+        "description": "Key educational reforms in the 19th century.",
+        "course": "RS112"
+      },
+      {
+        "_id": "M1202",
+        "name": "Simon Rodríguez Contributions",
+        "description": "Study of Simon Rodríguez educational philosophy.",
+        "course": "RS112"
+      },
+      {
+        "_id": "M1203",
+        "name": "Impact of Early Educational Movements",
+        "description": "Influence of early educational movements on modern education.",
+        "course": "RS112"
+      },
+      {
+        "_id": "M1301",
+        "name": "Foundations of Christian Ethics",
+        "description": "Study of Christian moral principles and virtues.",
+        "course": "RS113"
+      },
+      {
+        "_id": "M1302",
+        "name": "Biblical Teachings on Ethics",
+        "description": "Exploring ethical guidance from biblical texts.",
+        "course": "RS113"
+      },
+      {
+        "_id": "M1303",
+        "name": "Contemporary Issues in Christian Ethics",
+        "description": "Application of Christian ethics to modern challenges.",
+        "course": "RS113"
+      },
+      {
+        "_id": "M1401",
+        "name": "The Apostolic Age",
+        "description": "Overview of the development of early Christian communities.",
+        "course": "RS114"
+      },
+      {
+        "_id": "M1402",
+        "name": "Formation of Christian Doctrines",
+        "description": "Study of key doctrines in early Christianity.",
+        "course": "RS114"
+      },
+      {
+        "_id": "M1403",
+        "name": "The Spread of Christianity",
+        "description": "Exploration of how Christianity spread in the Roman Empire.",
+        "course": "RS114"
+      },
+      {
+        "_id": "M1501",
+        "name": "Servant Leadership in Christian Ministry",
+        "description": "Principles of servant leadership in Christian communities.",
+        "course": "RS115"
+      },
+      {
+        "_id": "M1502",
+        "name": "Pastoral Care and Community Building",
+        "description": "Building strong Christian communities through pastoral care.",
+        "course": "RS115"
+      },
+      {
+        "_id": "M1503",
+        "name": "Stewardship and Church Management",
+        "description": "Effective management and stewardship of church resources.",
+        "course": "RS115"
+      },
+      {
+        "_id": "M1601",
+        "name": "Introduction to Sufi Philosophy",
+        "description": "Exploring the core principles of Sufi philosophy.",
+        "course": "RS116"
+      },
+      {
+        "_id": "M1602",
+        "name": "Mystical Practices in Sufism",
+        "description": "Study of Sufi rituals and mystical practices.",
+        "course": "RS116"
+      },
+      {
+        "_id": "M1603",
+        "name": "Teachings of Rumi and Other Sufi Masters",
+        "description": "Insights from key Sufi figures like Rumi and Hafiz.",
+        "course": "RS116"
+      },
+      {
+        "_id": "M1701",
+        "name": "Ethical Wisdom in Islamic Teachings",
+        "description": "Moral teachings and wisdom from the Quran and Hadith.",
+        "course": "RS117"
+      },
+      {
+        "_id": "M1702",
+        "name": "The Role of Khidr in Islamic Thought",
+        "description": "Exploring the significance of Khidr in Islamic ethics.",
+        "course": "RS117"
+      },
+      {
+        "_id": "M1703",
+        "name": "Islamic Perspectives on Contemporary Ethics",
+        "description": "Application of Islamic ethics to modern issues.",
+        "course": "RS117"
+      },
+      {
+        "_id": "M1801",
+        "name": "Islamic Esotericism",
+        "description": "Study of mystical and esoteric aspects of Islam.",
+        "course": "RS118"
+      },
+      {
+        "_id": "M1802",
+        "name": "Symbolism in Islamic Mysticism",
+        "description": "Exploring spiritual symbolism in Islamic texts.",
+        "course": "RS118"
+      },
+      {
+        "_id": "M1803",
+        "name": "Mystical Experiences in Islamic Tradition",
+        "description": "Analysis of key mystical experiences in Islam.",
+        "course": "RS118"
+      },
+      {
+        "_id": "M1901",
+        "name": "Environmental Practices in Ancient China",
+        "description": "Study of ancient Chinese environmental management practices.",
+        "course": "RS119"
+      },
+      {
+        "_id": "M1902",
+        "name": "Flood Control and Water Management",
+        "description": "Exploration of water management techniques by Yu the Great.",
+        "course": "RS119"
+      },
+      {
+        "_id": "M1903",
+        "name": "Ancient Practices and Modern Environmental Challenges",
+        "description": "Relevance of ancient practices to current environmental issues.",
+        "course": "RS119"
+      },
+      {
+        "_id": "M2001",
+        "name": "Leadership Lessons from Chinese Mythology",
+        "description": "Exploring leadership principles from Chinese legends.",
+        "course": "RS120"
+      },
+      {
+        "_id": "M2002",
+        "name": "Ethical Governance in Mythology",
+        "description": "Study of ethical governance through Chinese mythology.",
+        "course": "RS120"
+      },
+      {
+        "_id": "M2003",
+        "name": "Visionary Leadership in Chinese History",
+        "description": "Analyzing leadership figures like Yu the Great.",
+        "course": "RS120"
+      },
+      {
+        "_id": "M2101",
+        "name": "Hydraulic Engineering in Ancient China",
+        "description": "Study of hydraulic engineering projects by Yu the Great.",
+        "course": "RS121"
+      },
+      {
+        "_id": "M2102",
+        "name": "Water Management in Ancient Civilizations",
+        "description": "Comparative study of water management techniques.",
+        "course": "RS121"
+      },
+      {
+        "_id": "M2103",
+        "name": "Engineering Lessons from Ancient Projects",
+        "description": "Lessons from ancient engineering practices for modern use.",
+        "course": "RS121"
+      }
+    ]
