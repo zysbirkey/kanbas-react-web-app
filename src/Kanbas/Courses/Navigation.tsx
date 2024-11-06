@@ -1,32 +1,22 @@
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 
 export default function CoursesNavigation() {
-  const { pathname } = useLocation(); // Get the current path
-  const { cid } = useParams(); // Get the course ID from the URL
+  const links = ["Home", "Modules", "Piazza", "Zoom", "Assignments", "Quizzes", "Grades", "People"];
+  const { cid } = useParams();
+  const location = useLocation();
 
-  // Define the links dynamically
-  const links = [
-    { label: "Home", path: `/Kanbas/Courses/${cid}/Home` },
-    { label: "Modules", path: `/Kanbas/Courses/${cid}/Modules` },
-    { label: "Piazza", path: `/Kanbas/Courses/${cid}/Piazza` },
-    { label: "Zoom", path: `/Kanbas/Courses/${cid}/Zoom` },
-    { label: "Assignments", path: `/Kanbas/Courses/${cid}/Assignments` },
-    { label: "Quizzes", path: `/Kanbas/Courses/${cid}/Quizzes` },
-    { label: "Grades", path: `/Kanbas/Courses/${cid}/Grades` },
-    { label: "People", path: `/Kanbas/Courses/${cid}/People` },
-  ];
+  const generateLinkPath = (link: string) => `/Kanbas/Courses/${cid}/${link}`;
 
   return (
     <div id="wd-courses-navigation" className="wd list-group fs-5 rounded-0">
-      {links.map((link) => (
+      {links.map((link, index) => (
         <Link
-          key={link.path}
-          to={link.path}
-          className={`list-group-item border border-0 ${
-            pathname.includes(link.label) ? "active text-danger" : "text-dark"
-          }`}
+          key={index}
+          to={generateLinkPath(link)}
+          className={`list-group-item border border-0 ${location.pathname.includes(link) ? 'active' : 'text-danger'}`}
+          id={`wd-course-${link.toLowerCase()}-link`}
         >
-          {link.label}
+          {link}
         </Link>
       ))}
     </div>

@@ -1,71 +1,95 @@
+import { useParams, useNavigate } from "react-router-dom";
 import AssignmentsControls from "./AssignmentsControls";
 import { BsGripVertical } from "react-icons/bs";
-import AssignmentsCheckmark from "./AssignmentsCheckmark";
-import AssignmentsControlButtons from "./AssignmentsControlButtons";
-import { PiNotePencilLight } from "react-icons/pi";
-import { GoTriangleDown } from "react-icons/go";
-import { useParams, Link } from "react-router-dom";
-import { assignments } from "../../Database";// Import assignments from the JSON
-
+import AssignControlButtons from "./AssignControlButtons";
+import { PiNotePencil } from "react-icons/pi";
+import { useDispatch, useSelector } from "react-redux";
+import { FaTrash } from "react-icons/fa6";
+import LessonControlButtons from "./AssignmentsControlButtons";
+import { deleteAssignment } from "./reducer";
+import AssignmentEditor from "./AssignmentEditor";
 
 export default function Assignments() {
-  const { cid } = useParams(); // Get course ID from the URL
-  // Filter assignments for the selected course
-  const courseAssignments = assignments.filter((assignment) => assignment.course === cid);
+  const { cid } = useParams();
+  const navigate = useNavigate();
+  const assignments = useSelector(
+    (state: any) => state.assignmentReducer
+  ).assignments.filter((assignment: any) => assignment.course === cid);
+  const { currentUser } = useSelector((state: any) => state.accountReducer); 
+  const dispatch = useDispatch();
+
+  const handleRemoveAssignment = (assignmentId: any) => {
+    dispatch(deleteAssignment(assignmentId));
+  };
 
   return (
     <div id="wd-assignments">
-      <AssignmentsControls />
-      <br/><br /><br />
-      <ul id="wd-assignments-title" className="list-group round-0 w-100">
-        <li className="wd-assignment list-group-item p-0 mb-5 fs-5 border-gray">
-          <div 
-            className="we-title p-3 ps-2 d-flex justify-content-between align-items-center" 
-            style={{ backgroundColor: '#f1f2f3'}}>
-            <div>
-              <BsGripVertical className="me-2 fs-3" /> <GoTriangleDown /> ASSIGNMENTS
-            </div>
-            <AssignmentsCheckmark/>
+      <AssignmentsControls onAddAssignmentClick={() => navigate(`/Kanbas/Courses/${cid}/Assignments/new`)} />
+      <ul id="wd-assignment-list" className="list-group rounded-0">
+        <li
+          id="wd-assignments-title"
+          className="wd-module list-group-item p-0 fs-5 d-flex justify-content-between align-items-center bg-light"
+          style={{ padding: "20px", width: "100%", maxWidth: "1000px", margin: "auto" }}
+        >
+          <div className="d-flex">
+            <BsGripVertical className="me-2 fs-3" />
+            <div className="fw-bold" style={{ color: 'black', fontSize: '1em' }}>ASSIGNMENTS</div>
           </div>
-
-          <ul id="wd-assignment-list" className="list-group rounded-0">
-          {courseAssignments.map((assignment) => (
-              <li
-                key={assignment._id}
-                className="wd-assignment-list-item list-group-item d-flex justify-content-between align-items-center position-relative"
-                style={{ borderLeft: "5px solid green", paddingLeft: "10px" }}
-              >
-                <div className="d-flex align-items-center">
-                  <BsGripVertical className="me-2 fs-3" />
-                  <PiNotePencilLight className="me-2 fs-3" />
-                  <div>
-                    {/* Assignment link with encoded course ID and assignment ID */}
-                    <Link
-                      to={`/Kanbas/Courses/${cid}/Assignments/${assignment._id}`}
-                      className="wd-assignment-link"
-                      style={{ color: "black", textDecoration: "none" }}
-                    >
-                      {assignment.title}
-                    </Link>
-                    <br />
-
-                    <span style={{ color: "red" }}>Multiple Modules</span> |{" "}
-                    <b>Not available until</b> {assignment.startDate} |
-                    <br />
-                    <span>
-                      <b>Due</b> {assignment.dueDate} | {assignment.points} pts
-                    </span>
-                  </div>
-                </div>
-                <div className="d-flex align-items-center">
-                  <AssignmentsControlButtons />
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div className="d-flex align-items-center">
+            <AssignControlButtons />
+          </div>
         </li>
+
+        {assignments.map((assignment: any, index: any) => (
+          <li
+            key={assignment._id}
+            id={`wd-assignment-${index + 1}`}
+            style={{ borderLeft: "5px solid green", paddingLeft: "10px" }}
+            className="list-group-item wd-assignment-list-item d-flex align-items-center"
+          >
+            <BsGripVertical className="me-1 fs-3 align-middle" />
+            <PiNotePencil className="me-3 fs-3 align-middle text-success" />
+            <div>
+              <a
+                id={`wd-assignment-link-${index + 1}`}
+                className="wd-assignment-link fw-bold"
+                href={`#/Kanbas/Courses/${cid}/Assignments/${assignment._id}`}
+                style={{ color: 'black', textDecoration: 'none', fontSize: '1.1em' }}
+              >
+                {assignment.title}
+              </a>
+              <br />
+              <span id={`wd-assignment-${index + 1}-details`} style={{ fontSize: '1em' }}>
+                <span style={{ color: 'red' }}>Multiple Modules</span> |{" "}
+                <span>
+                  <b>Not available until</b> {assignment.startDate}
+                </span>{" "}
+                | <br />
+                <span>
+                  <b>Due</b> {assignment.dueDate}
+                </span>{" "}
+                | <span>{assignment.points}</span>
+              </span>
+            </div>
+            {currentUser.role === "FACULTY" && (
+              <>
+            <div className="ms-auto">
+              <FaTrash
+                className="text-danger me-2 mb-1"
+                data-bs-toggle="modal"
+                data-bs-target={`#deleteModal-${assignment._id}`} 
+                style={{ fontSize: '1.1em' }}
+              />
+              <LessonControlButtons />
+            </div>
+            </>)}
+            <AssignmentEditor
+              assignmentId={assignment._id} 
+              removeAssignment={() => handleRemoveAssignment(assignment._id)}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
-            

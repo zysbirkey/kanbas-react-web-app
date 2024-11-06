@@ -1,7 +1,7 @@
 import { IoEllipsisVertical } from "react-icons/io5";
 import { BsPlus } from "react-icons/bs";
 
-export default function AssignmentsCheckmark() {
+export default function AssignControlButtons() {
   return (
     <div className="float-end">
       <button className="rounded-pill btn-secondary me-2" >

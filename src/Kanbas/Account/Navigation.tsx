@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+
 import "./Navigation.css"; 
 
 export default function AccountNavigation() {
-  const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const links = currentUser ? ["Profile"] : ["Signin", "Signup"];
+
+
   return (
     <div id="wd-account-navigation" style={{ display: "flex", flexDirection: "column" }}>
       <NavLink
@@ -14,7 +14,7 @@ export default function AccountNavigation() {
         style={({ isActive }) => ({
           color: isActive ? "black" : "red",
           borderLeft: isActive ? "4px solid black" : "none",
-          paddingLeft: "15px"
+          paddingLeft: "10px"
         })}
       >
         Signin
@@ -26,7 +26,7 @@ export default function AccountNavigation() {
         style={({ isActive }) => ({
           color: isActive ? "black" : "red",
           borderLeft: isActive ? "4px solid black" : "none",
-          paddingLeft: "15px"
+          paddingLeft: "10px"
         })}
       >
         Signup
@@ -38,7 +38,7 @@ export default function AccountNavigation() {
         style={({ isActive }) => ({
           color: isActive ? "black" : "red",
           borderLeft: isActive ? "4px solid black" : "none",
-          paddingLeft: "15px"
+          paddingLeft: "10px"
         })}
       >
         Profile

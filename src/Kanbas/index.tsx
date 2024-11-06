@@ -3,13 +3,12 @@ import Account from "./Account";
 import Dashboard from "./Dashboard";
 import KanbasNavigation from "./Navigation";
 import Courses from "./Courses";
-import "./styles.css";
-import * as db from "./Database";
 import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import ProtectedRoute from "./Account/ProtectedRoute";
-
+import "./styles.css";
+import * as db from "./Database";
 
 
 export default function Kanbas() {
