@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer";
-import { FaRegCalendarAlt } from "react-icons/fa";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();

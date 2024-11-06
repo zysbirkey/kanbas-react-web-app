@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export default function ChildStateComponent({ counter, setCounter }:
     { counter: number;
       setCounter: (counter: number) => void;}) {
