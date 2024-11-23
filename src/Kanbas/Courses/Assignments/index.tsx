@@ -29,7 +29,7 @@ export default function Assignments() {
     await assignmentsClient.deleteAssignment(assignmentId);
     dispatch(deleteAssignment(assignmentId));
   };
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchAssignments();
   }, []);

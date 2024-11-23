@@ -43,7 +43,6 @@ const enrollmentSlice = createSlice({
       state,
       action: PayloadAction<{ userId: string; courseId: string }>
     ) => {
-      const { userId, courseId } = action.payload;
       state.enrollments = state.enrollments.filter(
         (enrollment) => !(enrollment.user === action.payload.userId && enrollment.course === action.payload.courseId)
       );
