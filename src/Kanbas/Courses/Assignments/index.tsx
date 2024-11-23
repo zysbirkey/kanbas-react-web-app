@@ -32,6 +32,7 @@ export default function Assignments() {
 // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchAssignments();
+// eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
