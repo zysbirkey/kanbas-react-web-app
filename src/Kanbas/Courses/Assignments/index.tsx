@@ -6,8 +6,10 @@ import { PiNotePencil } from "react-icons/pi";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTrash } from "react-icons/fa6";
 import LessonControlButtons from "./AssignmentsControlButtons";
-import { deleteAssignment } from "./reducer";
+import { deleteAssignment, setAssignments } from "./reducer";
 import AssignmentEditor from "./AssignmentEditor";
+import * as assignmentsClient from "./client";
+import { useEffect } from "react";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -18,9 +20,19 @@ export default function Assignments() {
   const { currentUser } = useSelector((state: any) => state.accountReducer); 
   const dispatch = useDispatch();
 
-  const handleRemoveAssignment = (assignmentId: any) => {
+  const fetchAssignments = async () => {
+    const assignments = await assignmentsClient.findAssignmentsForCourse(cid as string);
+    dispatch(setAssignments(assignments));
+  };
+
+  const removeAssignment = async (assignmentId: string) => {
+    await assignmentsClient.deleteAssignment(assignmentId);
     dispatch(deleteAssignment(assignmentId));
   };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
 
   return (
     <div id="wd-assignments">
@@ -85,7 +97,7 @@ export default function Assignments() {
             </>)}
             <AssignmentEditor
               assignmentId={assignment._id} 
-              removeAssignment={() => handleRemoveAssignment(assignment._id)}
+              removeAssignment={() => removeAssignment(assignment._id)}
             />
           </li>
         ))}

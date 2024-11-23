@@ -13,7 +13,7 @@ interface EnrollmentState {
 
 // Initial state with an empty array of enrollments
 const initialState: EnrollmentState = {
-  enrollments: [],
+  enrollments: JSON.parse(localStorage.getItem("enrollments") || "[]"),
 };
 
 // Create a slice for managing enrollment-related actions and reducers
@@ -29,8 +29,9 @@ const enrollmentSlice = createSlice({
       state,
       action: PayloadAction<{ userId: string; courseId: string }>
       ) => {
-      const { userId, courseId } = action.payload;
-      state.enrollments.push({ user: userId, course: courseId });
+      const newEnrollment = { user: action.payload.userId, course: action.payload.courseId };
+      state.enrollments.push(newEnrollment);
+      localStorage.setItem("enrollments", JSON.stringify(state.enrollments));
     },
 
     /**
@@ -44,19 +45,14 @@ const enrollmentSlice = createSlice({
     ) => {
       const { userId, courseId } = action.payload;
       state.enrollments = state.enrollments.filter(
-        (enrollment) => !(enrollment.user === userId && enrollment.course === courseId)
+        (enrollment) => !(enrollment.user === action.payload.userId && enrollment.course === action.payload.courseId)
       );
+      localStorage.setItem("enrollments", JSON.stringify(state.enrollments));
     },
-
-
-    /**
-     * Action to load a predefined list of enrollments
-     * - Replaces the enrollments array with the provided list
-     */
     loadEnrollments: (state, action: PayloadAction<Enrollment[]>) => {
       state.enrollments = action.payload;
-      },
     },
+  },
 });
 
 // Export actions for dispatching

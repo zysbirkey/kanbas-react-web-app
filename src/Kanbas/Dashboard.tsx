@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { enrollCourse, unenrollCourse, loadEnrollments } from "./EnrollmentReducer";
+import { enrollCourse, unenrollCourse, loadEnrollments } from "./Courses/Enrollments/EnrollmentReducer";
 import { Link } from "react-router-dom";
 
 export default function Dashboard({

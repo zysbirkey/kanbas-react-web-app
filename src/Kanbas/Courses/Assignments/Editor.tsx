@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer";
+import * as assignmentsClient from "./client";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
@@ -21,13 +22,26 @@ export default function AssignmentEditor() {
     availableUntilDate: "2024-09-18",
   };
 
+  const createAssignment = async (assignment: any) => {
+    const newAssignment = await assignmentsClient.createAssignment(
+      cid as string,
+      assignment
+    );
+    dispatch(addAssignment(newAssignment));
+  };
+
+  const saveAssignment = async (assignment: any) => {
+    await assignmentsClient.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+
   const [editedAssignment, setEditedAssignment] = useState(assignment);
 
   const handleSave = async () => {
     if (isEdit) {
-      await dispatch(updateAssignment(editedAssignment));
+      await saveAssignment(editedAssignment);
     } else {
-      await dispatch(addAssignment(editedAssignment));
+      await createAssignment(editedAssignment); 
     }
     navigate(`/Kanbas/Courses/${cid}/Assignments`);
   };
