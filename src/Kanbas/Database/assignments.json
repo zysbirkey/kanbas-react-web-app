@@ -1,155 +1,38 @@
 [
-        {
-          "_id": "A101",
-          "title": "Rocket Propulsion Basics",
-          "course": "RS101",
-          "description": "Introduction to the fundamentals of rocket propulsion.",
-          "points": 100,
-          "startDate": "2024-10-01",
-          "dueDate": "2024-10-15"
-        },
-        {
-          "_id": "A102",
-          "title": "Advanced Combustion Theory",
-          "course": "RS101",
-          "description": "Study of combustion processes and their efficiency.",
-          "points": 100,
-          "startDate": "2024-10-05",
-          "dueDate": "2024-10-20"
-        },
-        {
-          "_id": "A103",
-          "title": "Rocket Engine Design Project",
-          "course": "RS101",
-          "description": "Design a model of a rocket engine based on provided criteria.",
-          "points": 100,
-          "startDate": "2024-10-10",
-          "dueDate": "2024-10-30"
-        },
-        {
-          "_id": "A201",
-          "title": "Aerodynamics Principles Quiz",
-          "course": "RS102",
-          "description": "Quiz covering fundamental principles of aerodynamics.",
-          "points": 100,
-          "startDate": "2024-10-01",
-          "dueDate": "2024-10-08"
-        },
-        {
-          "_id": "A202",
-          "title": "Airfoil Design Assignment",
-          "course": "RS102",
-          "description": "Design an airfoil and analyze its lift and drag properties.",
-          "points": 100,
-          "startDate": "2024-10-10",
-          "dueDate": "2024-10-25"
-        },
-        {
-          "_id": "A203",
-          "title": "Aircraft Lift and Drag Calculations",
-          "course": "RS102",
-          "description": "Calculate lift and drag for various aircraft configurations.",
-          "points": 100,
-          "startDate": "2024-10-15",
-          "dueDate": "2024-10-30"
-        },
-        {
-          "_id": "A301",
-          "title": "Spacecraft Structural Design",
-          "course": "RS103",
-          "description": "Design a structural frame for a small satellite.",
-          "points": 100,
-          "startDate": "2024-10-01",
-          "dueDate": "2024-10-20"
-        },
-        {
-          "_id": "A302",
-          "title": "Power Systems in Spacecraft",
-          "course": "RS103",
-          "description": "Analyze the power requirements and systems for a spacecraft.",
-          "points": 100,
-          "startDate": "2024-10-10",
-          "dueDate": "2024-10-25"
-        },
-        {
-          "_id": "A303",
-          "title": "Thermal Control Systems Case Study",
-          "course": "RS103",
-          "description": "Study and analyze a thermal control system used in space missions.",
-          "points": 100,
-          "startDate": "2024-10-15",
-          "dueDate": "2024-10-30"
-        },
-
-    { "_id": "A401", "title": "Organic Chemistry Reaction Mechanisms", "course": "RS104" },
-    { "_id": "A402", "title": "Functional Group Analysis", "course": "RS104" },
-    { "_id": "A403", "title": "Stereochemistry Lab Report", "course": "RS104" },
-  
-    { "_id": "A501", "title": "Inorganic Chemistry: Metal Complexes", "course": "RS105" },
-    { "_id": "A502", "title": "Crystal Field Theory Assignment", "course": "RS105" },
-    { "_id": "A503", "title": "Inorganic Catalysts Project", "course": "RS105" },
-  
-    { "_id": "A601", "title": "Thermodynamics in Physical Chemistry", "course": "RS106" },
-    { "_id": "A602", "title": "Quantum Chemistry Problem Set", "course": "RS106" },
-    { "_id": "A603", "title": "Kinetics and Reaction Dynamics", "course": "RS106" },
-  
-    { "_id": "A701", "title": "Elvish Language Translation Exercise", "course": "RS107" },
-    { "_id": "A702", "title": "Historical Linguistics of Middle-earth", "course": "RS107" },
-    { "_id": "A703", "title": "Khuzdul Script Deciphering", "course": "RS107" },
-  
-    { "_id": "A801", "title": "Case Study: The Council of Elrond", "course": "RS108" },
-    { "_id": "A802", "title": "Diplomacy Simulation: War of the Ring", "course": "RS108" },
-    { "_id": "A803", "title": "Leadership Styles in Middle-earth", "course": "RS108" },
-  
-    { "_id": "A901", "title": "Philosophy of Magic Use", "course": "RS109" },
-    { "_id": "A902", "title": "Analysis of Magical Artifacts", "course": "RS109" },
-    { "_id": "A903", "title": "The Role of Wizards in Middle-earth", "course": "RS109" },
-  
-    { "_id": "A1001", "title": "Educational Models for Democracy", "course": "RS110" },
-    { "_id": "A1002", "title": "Case Study: Democratic Schools", "course": "RS110" },
-    { "_id": "A1003", "title": "Social Equality and Education", "course": "RS110" },
-
-    { "_id": "A1101", "title": "Liberation Movements in Latin America", "course": "RS111" },
-  { "_id": "A1102", "title": "Simón Bolívar: Leadership and Legacy", "course": "RS111" },
-  { "_id": "A1103", "title": "Comparative Study of Independence Movements", "course": "RS111" },
-
-  { "_id": "A1201", "title": "Educational Innovations of Simon Rodríguez", "course": "RS112" },
-  { "_id": "A1202", "title": "19th Century Pedagogical Reforms", "course": "RS112" },
-  { "_id": "A1203", "title": "Impact of Early Educational Movements", "course": "RS112" },
-
-  { "_id": "A1301", "title": "Foundations of Christian Morality", "course": "RS113" },
-  { "_id": "A1302", "title": "Virtues and Vices: A Biblical Perspective", "course": "RS113" },
-  { "_id": "A1303", "title": "Contemporary Ethical Issues and Christian Responses", "course": "RS113" },
-
-  { "_id": "A1401", "title": "The Apostolic Age: A Historical Analysis", "course": "RS114" },
-  { "_id": "A1402", "title": "Early Christian Doctrines and Development", "course": "RS114" },
-  { "_id": "A1403", "title": "Challenges Faced by the Early Church", "course": "RS114" },
-
-  { "_id": "A1501", "title": "Principles of Servant Leadership", "course": "RS115" },
-  { "_id": "A1502", "title": "Building Community in Ministry", "course": "RS115" },
-  { "_id": "A1503", "title": "Stewardship and Church Management", "course": "RS115" },
-
-  { "_id": "A1601", "title": "Sufi Mysticism and the Teachings of Rumi", "course": "RS116" },
-  { "_id": "A1602", "title": "The Role of Love in Sufi Philosophy", "course": "RS116" },
-  { "_id": "A1603", "title": "Comparative Study of Sufi Orders", "course": "RS116" },
-
-  { "_id": "A1701", "title": "Moral Reasoning in Islamic Teachings", "course": "RS117" },
-  { "_id": "A1702", "title": "The Ethical Wisdom of Khidr", "course": "RS117" },
-  { "_id": "A1703", "title": "Islamic Perspectives on Contemporary Ethics", "course": "RS117" },
-
-  { "_id": "A1801", "title": "Islamic Esotericism and Spiritual Symbolism", "course": "RS118" },
-  { "_id": "A1802", "title": "Mystical Experiences in Islamic Tradition", "course": "RS118" },
-  { "_id": "A1803", "title": "The Unseen World in Islamic Thought", "course": "RS118" },
-
-  { "_id": "A1901", "title": "Environmental Principles of Yu the Great", "course": "RS119" },
-  { "_id": "A1902", "title": "Ancient Chinese Irrigation Techniques", "course": "RS119" },
-  { "_id": "A1903", "title": "Relevance of Ancient Practices to Modern Environmental Issues", "course": "RS119" },
-
-  { "_id": "A2001", "title": "Leadership Lessons from Yu the Great", "course": "RS120" },
-  { "_id": "A2002", "title": "Ethical Governance in Chinese Mythology", "course": "RS120" },
-  { "_id": "A2003", "title": "Visionary Leadership in Ancient China", "course": "RS120" },
-
-  { "_id": "A2101", "title": "Hydraulic Engineering in Ancient China", "course": "RS121" },
-  { "_id": "A2102", "title": "Comparative Study of Ancient Civilizations' Water Management", "course": "RS121" },
-  { "_id": "A2103", "title": "Modern Applications of Ancient Hydraulic Techniques", "course": "RS121" }
+  {
+    "title": "Propulsion Assignment",
+    "course": "RS101"
+  },
+  {
+    "title": "Combustion Analysis",
+    "course": "RS101"
+  },
+  {
+    "title": "Nozzle Design Project",
+    "course": "RS101"
+  },
+  {
+    "title": "Aerodynamics Quiz",
+    "course": "RS102"
+  },
+  {
+    "title": "Flow Analysis",
+    "course": "RS102"
+  },
+  {
+    "title": "Heating Analysis",
+    "course": "RS102"
+  },
+  {
+    "title": "Structural Design Task",
+    "course": "RS103"
+  },
+  {
+    "title": "Orbital Calculations",
+    "course": "RS103"
+  },
+  {
+    "title": "Systems Engineering Exam",
+    "course": "RS103"
+  }
 ]

@@ -14,7 +14,7 @@ export default function Session({ children }: { children: any }) {
     }
     setPending(false);
   };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+ 
   useEffect(() => {
     fetchProfile();
   // eslint-disable-next-line react-hooks/exhaustive-deps
